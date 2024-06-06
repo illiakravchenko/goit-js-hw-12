@@ -42,7 +42,7 @@ button.addEventListener('click', moreImg);
 async function getQuery(event) {
   event.preventDefault();
   showLoader();
-  const searchQuery = event.target.elements.input.value.trim();
+  searchQuery = event.target.elements.input.value.trim();
   gallery.innerHTML = '';
   currentPage = 1;
 
@@ -73,11 +73,11 @@ async function getQuery(event) {
   } catch (error) {
     console.log(error);
   }
-  //   iziToast.success({
-  //     message:
-  //       'Wow, there are many images matching your search query. Keep going!',
-  //     position: 'topRight',
-  //   });
+  iziToast.success({
+    message:
+      'Wow, there are many images matching your search query. Keep going!',
+    position: 'topRight',
+  });
   hideLoader();
   checkPage();
   form.reset();

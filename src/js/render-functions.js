@@ -12,7 +12,7 @@ function renderImage({
 }) {
   return `<li class="cards">
       <a href="${webformatURL}">
-        <img src="${largeImageURL}" alt="${tags}">
+        <img class="photo" src="${largeImageURL}" alt="${tags}">
       </a>
       <div>
         <ul class="cards-info">
